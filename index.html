@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BikerDunia — Every Road Has a Story</title>
+<meta name="description" content="India's next-generation road travel platform. Plan journeys, find travel companions, track adventures, and travel safely.">
+<meta property="og:title" content="BikerDunia — Every Road Has a Story">
+<meta property="og:description" content="India's next-generation road travel platform. Coming soon.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B6E4F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div id="mouse-follower"></div>
+
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">BikerDunia</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#vision" class="nav-link">Vision</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#team" class="nav-link">Join Team</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <canvas class="hero-particles" id="particlesCanvas"></canvas>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span></span> Coming Soon</div>
+      <h1>Every Road Has a Story.<br><span class="highlight">Start Yours with BikerDunia.</span></h1>
+      <p>We're building India's next-generation road travel platform. Plan journeys. Find travel companions. Track adventures. Travel safely. Everything in one place.</p>
+      <div class="typing-wrap">
+        <span class="static-text">✦&nbsp;</span>
+        <span class="typing-text" id="typingText"></span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#newsletter" class="btn btn-primary" id="notifyBtn">
+          Notify Me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#vision" class="btn btn-secondary">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Beta Waitlist</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="1200">0</div>
+          <div class="stat-label">Community Members</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="15" data-suffix="+">0</div>
+          <div class="stat-label">Features in Development</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="2026" data-suffix="">2026</div>
+          <div class="stat-label">Launching Q3 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section" id="vision">
+  <div class="container">
+    <div class="vision-grid">
+      <div class="vision-content reveal">
+        <div class="section-label">Our Vision</div>
+        <h2>Why Road Travel<br>Deserves <span>a Better Platform</span></h2>
+        <p>For too long, road travelers have relied on fragmented tools — maps, messaging apps, and scattered forums. There's never been a single, intelligent platform designed specifically for the road travel experience. Until now.</p>
+        <div class="vision-timeline">
+          <div class="vision-item reveal reveal-delay-1">
+            <h4>Fragmented Tools</h4>
+            <p>Riders juggle between apps for navigation, communication, and planning. No unified experience.</p>
+          </div>
+          <div class="vision-item reveal reveal-delay-2">
+            <h4>Trust &amp; Safety Gaps</h4>
+            <p>Finding verified travel companions and ensuring on-road safety remains a critical unsolved problem.</p>
+          </div>
+          <div class="vision-item reveal reveal-delay-3">
+            <h4>The BikerDunia Difference</h4>
+            <p>One platform — smart trip planning, verified community, real-time safety, and intelligent insights.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vision-visual reveal reveal-delay-2">
+        <img src="mountaain-road.jpg" alt="Scenic mountain road" loading="lazy">
+        <div class="vision-visual-overlay">
+          <div class="quote-icon">"</div>
+          <blockquote>The road is out there, waiting. We're building the compass.</blockquote>
+          <cite>— BikerDunia Team</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section features" id="features">
+  <div class="container">
+    <div class="features-header reveal">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything You Need<br>for the Open Road</h2>
+      <p class="section-subtitle">Designed for every rider, from weekend explorers to cross-country adventurers.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-number">01</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="M22 6l-3-3"/><path d="M6 19l-4 4"/><path d="M18 19l4 4"/></svg>
+        </div>
+        <h3>Vehicle Garage</h3>
+        <p>Manage every vehicle beautifully — specs, service history, documents, all in one place.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-number">02</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Live Trip Tracking</h3>
+        <p>Track every adventure in real-time with GPS, route logging, and shareable trip maps.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <span class="feature-number">03</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Ride Companion Finder</h3>
+        <p>Find verified travel companions who share your route, pace, and travel style.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-4">
+        <span class="feature-number">04</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 4-6"/></svg>
+        </div>
+        <h3>Group Ride Tracking</h3>
+        <p>Never lose your group. See every rider's location on a shared live map during group rides.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-number">05</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Emergency SOS</h3>
+        <p>Travel safely with one-tap emergency alerts, live location sharing, and trusted contacts.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-number">06</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg>
+        </div>
+        <h3>Offline Maps</h3>
+        <p>Travel anywhere without network. Download regions in advance with full offline navigation.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <span class="feature-number">07</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Real-time Chat</h3>
+        <p>Communicate with your group during trips with built-in messaging and ride-specific channels.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-4">
+        <span class="feature-number">08</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Premium Membership</h3>
+        <p>Unlock advanced travel tools, priority support, exclusive routes, and member-only events.</p>
+      </div>
+      <div class="secret-box reveal reveal-delay-3">
+        <div class="secret-badge"><span class="lock">&#x1F512;</span> Secret</div>
+        <h3>Many More Features Are Coming</h3>
+        <p>It's just a secret — because great things take time. We're building something extraordinary behind the scenes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section" id="why">
+  <div class="container">
+    <div class="features-header reveal">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">The Smarter Way<br>to Travel the Road</h2>
+      <p class="section-subtitle">We've reimagined road travel from the ground up. See the difference.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card traditional reveal reveal-delay-1">
+        <div class="compare-label traditional-label">Traditional Travel</div>
+        <h3>Fragmented &amp; Frustrating</h3>
+        <ul class="compare-list">
+          <li><span class="icon cross">✕</span> Multiple apps for planning, maps, and chat</li>
+          <li><span class="icon cross">✕</span> No verified travel companion network</li>
+          <li><span class="icon cross">✕</span> Manual group coordination during rides</li>
+          <li><span class="icon cross">✕</span> No dedicated emergency safety system</li>
+          <li><span class="icon cross">✕</span> Limited offline capabilities</li>
+        </ul>
+      </div>
+      <div class="compare-card bikerdunia reveal reveal-delay-2">
+        <div class="compare-label bikerdunia-label">BikerDunia</div>
+        <h3>All-in-One. Intelligent. Safe.</h3>
+        <ul class="compare-list bikerdunia-list">
+          <li><span class="icon check">✓</span> Unified platform — plan, navigate, connect</li>
+          <li><span class="icon check">✓</span> Verified rider profiles with trust ratings</li>
+          <li><span class="icon check">✓</span> Real-time group tracking on shared maps</li>
+          <li><span class="icon check">✓</span> One-tap SOS with live location sharing</li>
+          <li><span class="icon check">✓</span> Full offline maps and navigation support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section mission" id="mission">
+  <div class="mission-bg">
+    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=80" alt="Mountain landscape" loading="lazy">
+    <div class="overlay"></div>
+  </div>
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-content reveal">
+        <div class="section-label">Our Mission</div>
+        <h2>Building the Future<br>of Road Travel</h2>
+        <p>We believe every road tells a story, and every traveler deserves the tools to write theirs. BikerDunia was born from a simple idea — make road travel smarter, safer, and more connected.</p>
+        <div class="mission-quote">
+          <p>"The best journeys are not just about the destination. They're about the freedom, the people, and the stories along the way."</p>
+          <cite>— Founders, BikerDunia</cite>
+        </div>
+        <div class="mission-stats">
+          <div class="mission-stat">
+            <div class="number">2026</div>
+            <div class="label">Public Launch</div>
+          </div>
+          <div class="mission-stat">
+            <div class="number">20K+</div>
+            <div class="label">Early Adopters</div>
+          </div>
+          <div class="mission-stat">
+            <div class="number">15+</div>
+            <div class="label">Features Planned</div>
+          </div>
+        </div>
+      </div>
+      <div class="mission-visual reveal reveal-delay-2">
+        <div class="mission-timeline">
+          <div class="timeline-item">
+            <div class="left">
+              <div class="date">Q1 2025</div>
+              <div class="title">Idea &amp; Research</div>
+            </div>
+            <div class="dot"></div>
+            <div class="right"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="left"></div>
+            <div class="dot"></div>
+            <div class="right">
+              <div class="date">Q2 2025</div>
+              <div class="title">Design &amp; Prototype</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="left">
+              <div class="date">Q3 2025</div>
+              <div class="title">Development</div>
+            </div>
+            <div class="dot"></div>
+            <div class="right"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="left"></div>
+            <div class="dot"></div>
+            <div class="right">
+              <div class="date">Q1 2026</div>
+              <div class="title">Private Beta</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="left">
+              <div class="date">Q3 2026</div>
+              <div class="title">Public Launch</div>
+            </div>
+            <div class="dot"></div>
+            <div class="right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section team" id="team">
+  <div class="container">
+    <div class="team-header reveal">
+      <div class="section-label">Join Our Team</div>
+      <h2>Build the Future of<br>Road Travel With Us.</h2>
+      <p>We're looking for passionate developers, designers, marketers, travelers, and dreamers who want to shape the future of road travel in India.</p>
+    </div>
+    <div class="team-avatars reveal reveal-delay-1">
+      <div class="avatar" style="background:#0B6E4F">AK</div>
+      <div class="avatar" style="background:#FF7A00">PM</div>
+      <div class="avatar" style="background:#6366F1">RJ</div>
+      <div class="avatar" style="background:#EC4899">SK</div>
+      
+      <div class="avatar-count">+5</div>
+    </div>
+    <div class="reveal reveal-delay-2" style="display:flex;justify-content:center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfw9Ush9T2ww4590xkkS0k-vDT81mpyvhiHV3LsWnagp3OFOQ/viewform?usp=publish-editor" class="btn btn-primary">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section roadmap" id="roadmap">
+  <div class="container">
+    <div class="roadmap-header reveal">
+      <div class="section-label">Roadmap</div>
+      <h2 class="section-title">Our Journey to Launch</h2>
+      <p class="section-subtitle">Every great adventure starts with a single step. Here's our path forward.</p>
+    </div>
+    <div class="roadmap-timeline">
+      <div class="roadmap-item">
+        <div class="roadmap-content reveal reveal-delay-1">
+          <div class="roadmap-label">Step 1</div>
+          <h4>Idea &amp; Research</h4>
+          <p>Identifying pain points in road travel and designing solutions that matter.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-content reveal reveal-delay-2">
+          <div class="roadmap-label">Step 2</div>
+          <h4>Design &amp; Prototype</h4>
+          <p>Crafting an intuitive, beautiful experience for every type of traveler.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+      <div class="roadmap-item active">
+        <div class="roadmap-content reveal reveal-delay-3">
+          <div class="roadmap-label">Step 3 — <strong>Now</strong></div>
+          <h4>Development</h4>
+          <p>Building the platform with cutting-edge technology for reliability and scale.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-content reveal reveal-delay-4">
+          <div class="roadmap-label">Step 4</div>
+          <h4>Private Beta</h4>
+          <p>Inviting early adopters to test, provide feedback, and shape the final product.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-content reveal reveal-delay-5">
+          <div class="roadmap-label">Step 5</div>
+          <h4>Public Launch</h4>
+          <p>Opening BikerDunia to every rider and traveler across India.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-content reveal reveal-delay-6">
+          <div class="roadmap-label">Step 6</div>
+          <h4>Future Expansion</h4>
+          <p>New features, global markets, and a growing community of road travelers.</p>
+        </div>
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section" id="newsletter">
+  <div class="container">
+    <div class="newsletter-wrap reveal">
+      <div class="newsletter-card">
+        <h3>Be the First to Know.</h3>
+        <p>Join our early access list and get exclusive updates, behind-the-scenes content, and launch invitations.</p>
+        <div class="newsletter-form">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSePxqBRaVvMRidGjTFGn1yX8RwUOCc6Ny35WEfNXRhw49Tj5g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">BikerDunia</a>
+        <p>India's next-generation road travel platform. Built by riders, for riders. Every road has a story — start yours with us.</p>
+        <div class="footer-social">
+          <a href="#" title="Twitter / X" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" title="YouTube" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#vision">Vision</a>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#team">Join Team</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:hello@bikerdunia.com">hello@bikerdunia.com</a>
+        <a href="#">Press Kit</a>
+        <a href="#">Brand Assets</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BikerDunia. All rights reserved.</span>
+      <span>Made with <span class="heart">&#9829;</span> for Riders and Road Travelers.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // Scroll Progress
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  });
+
+  // Mouse Follower
+  const follower = document.getElementById('mouse-follower');
+  let mouseX = -100, mouseY = -100;
+  let currentX = -100, currentY = -100;
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+    follower.style.opacity = '1';
+    document.addEventListener('mousemove', function(e){
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    document.querySelectorAll('a, button, .feature-card, .stat-card, .compare-card, .btn').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ follower.classList.add('active'); });
+      el.addEventListener('mouseleave', function(){ follower.classList.remove('active'); });
+    });
+    function animateFollower(){
+      currentX += (mouseX - currentX) * 0.12;
+      currentY += (mouseY - currentY) * 0.12;
+      follower.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px) translate(-50%,-50%)';
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+  }
+
+  // Navbar
+  const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-link').forEach(function(link){
+    link.addEventListener('click', function(){
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // Particles
+  const canvas = document.getElementById('particlesCanvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let animId;
+
+  function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  class Particle {
+    constructor(){ this.reset(); }
+    reset(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2.5 + 0.5;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.speedY = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.5 + 0.1;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+        this.reset();
+      }
+    }
+    draw(){
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + this.opacity + ')';
+      ctx.fill();
+    }
+  }
+
+  const particleCount = Math.min(80, Math.floor(canvas.width * canvas.height / 12000));
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+
+  function animateParticles(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p){
+      p.update();
+      p.draw();
+    });
+    animId = requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+
+  // Parallax Hero
+  const heroBg = document.getElementById('heroBg');
+  window.addEventListener('scroll', function(){
+    const scrollY = window.scrollY;
+    if (scrollY <= window.innerHeight) {
+      heroBg.style.transform = 'scale(1.1) translateY(' + (scrollY * 0.15) + 'px)';
+    }
+  });
+
+  // Typing Animation
+  const typingEl = document.getElementById('typingText');
+  const phrases = [
+    'Coming Soon...',
+    'Building Something Extraordinary...',
+    'Adventure Starts Here...',
+    'Your Road. Your Story.',
+    'Launching Soon...'
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 80;
+
+  function typeEffect(){
+    const currentPhrase = phrases[phraseIndex];
+    if (!isDeleting) {
+      typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 2000;
+        setTimeout(function(){ typeSpeed = 50; typeEffect(); }, 2000);
+        return;
+      }
+    } else {
+      typingEl.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+      }
+    }
+    setTimeout(typeEffect, typeSpeed);
+  }
+  setTimeout(typeEffect, 500);
+
+  // Counter Animation
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-count'));
+        if (el.dataset.animated) return;
+        el.dataset.animated = 'true';
+        animateCounter(el, target);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(function(c){ counterObserver.observe(c); });
+
+  function animateCounter(el, target){
+    const suffix = el.dataset.suffix !== undefined ? el.dataset.suffix : (target >= 1000 ? '+' : '');
+    const displayTarget = target;
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function update(currentTime){
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * displayTarget);
+      el.textContent = current.toLocaleString() + (suffix && progress >= 1 ? suffix : '');
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = displayTarget.toLocaleString() + suffix;
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  // Section Reveal
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(function(el){ revealObserver.observe(el); });
+
+  // Newsletter Form
+  const form = document.getElementById('newsletterForm');
+  const emailInput = document.getElementById('emailInput');
+  const successDiv = document.getElementById('newsletterSuccess');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailInput.classList.add('error');
+      emailInput.focus();
+      return;
+    }
+    emailInput.classList.remove('error');
+    emailInput.disabled = true;
+    form.querySelector('button').disabled = true;
+    form.style.display = 'none';
+    successDiv.classList.add('show');
+  });
+
+  emailInput.addEventListener('input', function(){
+    emailInput.classList.remove('error');
+  });
+
+  // Button Ripple Effect (only on buttons, not links)
+  document.querySelectorAll('button.btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'btn-ripple';
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
+      btn.appendChild(ripple);
+      setTimeout(function(){ ripple.remove(); }, 600);
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
